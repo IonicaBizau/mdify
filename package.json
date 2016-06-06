@@ -38,6 +38,7 @@
   "homepage": "https://github.com/IonicaBizau/mdify#readme",
   "dependencies": {
     "js-yaml": "^3.6.1",
+    "read-utf8": "^1.2.3",
     "showdown": "^1.4.1",
     "ul": "^5.2.2"
   }
