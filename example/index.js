@@ -8,6 +8,8 @@ let md = mdify.stringify({
   , tags: ["hello", "world"]
 }, `## Hello World!
 Hey **there**!`);
+
+console.log(md);
 // ---
 // author: Johnny B.
 // date: 2016-06-06T07:12:17.533Z
@@ -18,7 +20,6 @@ Hey **there**!`);
 // ## Hello World!
 // Hey **there**!
 
-console.log(md);
 
 console.log(mdify.parse(md));
 // { markdown: '\n## Hello World!\nHey **there**!',
