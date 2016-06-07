@@ -51,12 +51,15 @@ console.log(mdify.parse(md));
 ## :memo: Documentation
 
 
-### `stringify(metadata, content)`
+### `stringify(metadata, content, opts)`
 Stringify metadata and content.
 
 #### Params
 - **Object** `metadata`: The metadata object.
 - **String** `content`: The markdown content.
+- **Object** `opts`: An object containing the following fields:
+ - `start` (String): The start delimiter of the metadata (default: `---`).
+ - `end` (String): The end delimiter of the metadata (default: `---`).
 
 #### Return
 - **String** The markdown content prefixed by the stringified metadata.
@@ -79,13 +82,14 @@ Parses the markdown input and the metadata.
  - `rawMeta` (String): The raw metadata content.
  - `html` (String): The generated HTML from markdown.
 
-### `writeFile(path, metadata, content, cb)`
+### `writeFile(path, metadata, content, options, cb)`
 Writes the generated content into a file.
 
 #### Params
 - **String** `path`: The file path.
 - **Object** `metadata`: The metadata object.
 - **String** `content`: The markdown content.
+- **Object** `options`: The stringify options.
 - **Function** `cb`: The callback function.
 
 ### `parseFile(path, opts, cb)`
