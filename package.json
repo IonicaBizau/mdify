@@ -41,5 +41,8 @@
     "read-utf8": "^1.2.3",
     "showdown": "^1.4.1",
     "ul": "^5.2.2"
+  },
+  "blah": {
+    "h_img": "http://i.imgur.com/koH6iq4.png"
   }
 }
