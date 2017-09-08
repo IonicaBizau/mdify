@@ -6,6 +6,7 @@ You can see below the API reference of this module.
 Stringify metadata and content.
 
 #### Params
+
 - **Object** `metadata`: The metadata object.
 - **String** `content`: The markdown content.
 - **Object** `opts`: An object containing the following fields:
@@ -19,6 +20,7 @@ Stringify metadata and content.
 Parses the markdown input and the metadata.
 
 #### Params
+
 - **String** `input`: The markdown code. If it contains metadata, it will be parsed.
 - **Object** `opts`: An object containing the following fields:
  - `start` (String): The metadata prefix (default: `---`).
@@ -37,6 +39,7 @@ Parses the markdown input and the metadata.
 Writes the generated content into a file.
 
 #### Params
+
 - **String** `path`: The file path.
 - **Object** `metadata`: The metadata object.
 - **String** `content`: The markdown content.
@@ -47,6 +50,7 @@ Writes the generated content into a file.
 Parses a markdown file.
 
 #### Params
+
 - **String** `path`: The file path.
 - **Object** `opts`: The parser options.
 - **Function** `cb`: The callback function.
