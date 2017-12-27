@@ -12,6 +12,7 @@ Stringify metadata and content.
 - **Object** `opts`: An object containing the following fields:
  - `start` (String): The start delimiter of the metadata (default: `---`).
  - `end` (String): The end delimiter of the metadata (default: `---`).
+ - `yamlOptions` (Object): Custom js-yaml options.
 
 #### Return
 - **String** The markdown content prefixed by the stringified metadata.
