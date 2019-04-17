@@ -7,13 +7,13 @@ declare class mdify {
 
     static parse(input: string, opts?: mdify.parseOptions): mdify.parseResult;
 
-    static parseFile(path: string, opts: mdify.parseOptions): mdify.parseResult;
+    static parseFile(path: string, opts?: mdify.parseOptions): mdify.parseResult;
 
-    static parseFile(path: string, opts: mdify.parseOptions, cb: (error: Error, result: mdify.parseResult) => void): void;
+    static parseFile(path: string, opts?: mdify.parseOptions, cb?: (error: Error, result: mdify.parseResult) => void): void;
 
     static stringify(metadata: any, content: string, options?: mdify.stringifyOptions): string;
 
-    static writeFile(path: string, metadata: any, content: string, options: mdify.stringifyOptions, cb: any): void;
+    static writeFile(path: string, metadata: any, content: string, options?: mdify.stringifyOptions, cb?: any): void;
 
 }
 
