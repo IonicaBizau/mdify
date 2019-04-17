@@ -28,11 +28,7 @@ Parses the markdown input and the metadata.
  - `converterOptions` (Object): The converter options passed to [`showdown`](https://github.com/showdownjs/showdown).
 
 #### Return
-- **Object** An object containing the following fields:
- - `markdown` (String): The markdown content.
- - `metadata` (Object): The parsed metadata.
- - `rawMeta` (String): The raw metadata content.
- - `html` (String): The generated HTML from markdown.
+- [**ParseResult**][type-parseresult]
 
 ### `writeFile(path, metadata, content[, options[, cb]])`
 Writes the generated content into a file.
@@ -53,9 +49,16 @@ Parses a markdown file.
 - **Function** `[cb]`: The callback function.
 
 #### Return
-- **Object** **If `cb` was omitted**: an object containing the following fields:
- - `markdown` (String): The markdown content.
- - `metadata` (Object): The parsed metadata.
- - `rawMeta` (String): The raw metadata content.
- - `html` (String): The generated HTML from markdown.
+- [**ParseResult**][type-parseresult] Only **if `cb` was omitted**.
 
+---
+
+### Type: `ParseResult`
+An object containing the following fields:
+
+- **String** `markdown`: The Markdown content.
+- **Object** `metadata`: The parsed metadata.
+- **String** `rawMeta`: The raw metadata content.
+- **String** `html`: The generated HTML from Markdown.
+
+[type-parseresult]: #type-parseresult

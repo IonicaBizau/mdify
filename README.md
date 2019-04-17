@@ -74,14 +74,14 @@ There are few ways to get help:
 ## :memo: Documentation
 
 
-### `stringify(metadata, content, opts)`
+### `stringify(metadata, content[, options])`
 Stringify metadata and content.
 
 #### Params
 
 - **Object** `metadata`: The metadata object.
 - **String** `content`: The markdown content.
-- **Object** `opts`: An object containing the following fields:
+- **Object** `[options]`: An object containing the following fields:
  - `start` (String): The start delimiter of the metadata (default: `---`).
  - `end` (String): The end delimiter of the metadata (default: `---`).
  - `yamlOptions` (Object): Custom js-yaml options.
@@ -89,26 +89,22 @@ Stringify metadata and content.
 #### Return
 - **String** The markdown content prefixed by the stringified metadata.
 
-### `parse(input, opts)`
+### `parse(input[, options])`
 Parses the markdown input and the metadata.
 
 #### Params
 
 - **String** `input`: The markdown code. If it contains metadata, it will be parsed.
-- **Object** `opts`: An object containing the following fields:
+- **Object** `[options]`: An object containing the following fields:
  - `start` (String): The metadata prefix (default: `---`).
  - `end` (RegExp): The metadata end.
  - `html` (Boolean): If `true`, the markdown code will be parsed into HTML (default: `true`).
  - `converterOptions` (Object): The converter options passed to [`showdown`](https://github.com/showdownjs/showdown).
 
 #### Return
-- **Object** An object containing the following fields:
- - `markdown` (String): The markdown content.
- - `metadata` (Object): The parsed metadata.
- - `rawMeta` (String): The raw metadata content.
- - `html` (String): The generated HTML from markdown.
+- [**ParseResult**][docs-type-parseresult]
 
-### `writeFile(path, metadata, content, options, cb)`
+### `writeFile(path, metadata, content[, options[, cb]])`
 Writes the generated content into a file.
 
 #### Params
@@ -116,17 +112,30 @@ Writes the generated content into a file.
 - **String** `path`: The file path.
 - **Object** `metadata`: The metadata object.
 - **String** `content`: The markdown content.
-- **Object** `options`: The stringify options.
-- **Function** `cb`: The callback function.
+- **Object** `[options]`: The stringify options.
+- **Function** `[cb]`: The callback function.
 
-### `parseFile(path, opts, cb)`
+### `parseFile(path[, options[, cb]])`
 Parses a markdown file.
 
 #### Params
 
 - **String** `path`: The file path.
-- **Object** `opts`: The parser options.
-- **Function** `cb`: The callback function.
+- **Object** `[options]`: The parser options.
+- **Function** `[cb]`: The callback function.
+
+#### Return
+- [**ParseResult**][docs-type-parseresult] Only **if `cb` was omitted**.
+
+---
+
+### Type: `ParseResult`
+An object containing the following fields:
+
+- **String** `markdown`: The Markdown content.
+- **Object** `metadata`: The parsed metadata.
+- **String** `rawMeta`: The raw metadata content.
+- **String** `html`: The generated HTML from Markdown.
 
 
 
@@ -178,3 +187,5 @@ If you are using this library in one of your projects, add it in this list. :spa
 [website]: https://ionicabizau.net
 [contributing]: /CONTRIBUTING.md
 [docs]: /DOCUMENTATION.md
+
+[docs-type-parseresult]: #type-parseresult
