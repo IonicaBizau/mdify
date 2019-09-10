@@ -2,7 +2,7 @@
 
 You can see below the API reference of this module.
 
-### `stringify(metadata, content[, options])`
+### `stringify(metadata, content, [options])`
 Stringify metadata and content.
 
 #### Params
@@ -16,7 +16,7 @@ Stringify metadata and content.
 #### Return
 - **String** The markdown content prefixed by the stringified metadata.
 
-### `parse(input[, options])`
+### `parse(input, [options])`
 Parses the markdown input and the metadata.
 
 #### Params
@@ -28,9 +28,9 @@ Parses the markdown input and the metadata.
  - `converterOptions` (Object): The converter options passed to [`showdown`](https://github.com/showdownjs/showdown).
 
 #### Return
-- [**ParseResult**][type-parseresult]
+- **ParseResult**
 
-### `writeFile(path, metadata, content[, options[, cb]])`
+### `writeFile(path, metadata, content, [options], [cb])`
 Writes the generated content into a file.
 
 #### Params
@@ -40,7 +40,7 @@ Writes the generated content into a file.
 - **Object** `[options]`: The stringify options.
 - **Function** `[cb]`: The callback function.
 
-### `parseFile(path[, options[, cb]])`
+### `parseFile(path, [options], [cb])`
 Parses a markdown file.
 
 #### Params
@@ -49,16 +49,7 @@ Parses a markdown file.
 - **Function** `[cb]`: The callback function.
 
 #### Return
-- [**ParseResult**][type-parseresult] Only **if `cb` was omitted**.
+- **ParseResult** Only **if `cb` was omitted**.
 
----
-
-### Type: `ParseResult`
 An object containing the following fields:
 
-- **String** `markdown`: The Markdown content.
-- **Object** `metadata`: The parsed metadata.
-- **String** `rawMeta`: The raw metadata content.
-- **String** `html`: The generated HTML from Markdown.
-
-[type-parseresult]: #type-parseresult
