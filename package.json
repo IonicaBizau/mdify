@@ -46,12 +46,12 @@
   },
   "homepage": "https://github.com/IonicaBizau/mdify#readme",
   "dependencies": {
-    "@types/js-yaml": "^3.11.2",
-    "@types/showdown": "^1.7.5",
-    "js-yaml": "^3.6.1",
-    "read-utf8": "^1.2.3",
-    "showdown": "^1.4.1",
-    "ul": "^5.2.2"
+    "@types/js-yaml": "^4.0.5",
+    "@types/showdown": "^1.9.4",
+    "js-yaml": "^4.1.0",
+    "read-utf8": "^1.2.10",
+    "showdown": "^2.0.3",
+    "ul": "^5.2.15"
   },
   "blah": {
     "h_img": "http://i.imgur.com/koH6iq4.png"
